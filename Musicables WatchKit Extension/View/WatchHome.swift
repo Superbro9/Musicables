@@ -13,7 +13,6 @@ struct WatchHome: View {
     
     var body: some View {
         ZStack {
-            //NavigationView {
                 VStack {
                     // Record button...
                     Button {
@@ -28,69 +27,65 @@ struct WatchHome: View {
                             .foregroundStyle(.white)
                     }
                 }
-           //     .navigationTitle("Shazam Kit")
-           // }
             if let track = shazamSession.matchedTrack {
-                    ZStack {
-                        // background blurred image
-                        AsyncImage(url: track.artwork) { phase in
-                            if let image = phase.image {
-                                image
-                                    //.resizable()
-                                    .aspectRatio(contentMode: .fill)
-                            }
-                            else {
-                                Color.white
-                            }
-                        }
-                        // max width
-                        .frame(maxWidth: 250, maxHeight: 320)
-                        
-                        // track info
-                        VStack(spacing: 5) {
-                            
-                            // background blurred image
-                            AsyncImage(url: track.artwork) { phase in
+                GeometryReader { geometry in
+                        ZStack {
+                            // track info
+                            VStack(spacing: 10) {
+                                
+                                // album artwork image
+                                AsyncImage(url: track.artwork) { phase in
                                 if let image = phase.image {
                                     image
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 200, height: 300)
-                                        .cornerRadius(12)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                        .padding(.leading, -14)
+                                        //.padding(.top, -28)
+                                        //.padding(.bottom)
+                                        .edgesIgnoringSafeArea(.all)
+                                    
+                                     //   .resizable()
+                                     //   .aspectRatio(contentMode: .fill)
+                                     //   .frame(width: geometry.size.width, height: //geometry.size.height)
+                                     //   .cornerRadius(6)
+                                     //   .padding(.top, -28)
+                                     //   .padding(.bottom)
                                 }
-                                else {
-                                    ProgressView()
+                                    else {
+                                        ProgressView()
+                                    }
                                 }
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                
+                            //    VStack {
+                            //        Text(track.title)
+                            //            .padding(.horizontal)
+                            //            .padding(.top, -2)
+                            //
+                            //        Text("**\(track.artist)**")
+                            //            .padding(.horizontal)
+                            //    }
                             }
-                            .frame(width: 200, height: 300)
-                            
-                            Text(track.title)
-                                .font(.title2.bold())
-                                .padding(.horizontal)
-                            
-                            Text("Artist: **\(track.artist)**")
-                                .padding(.horizontal)
-                            
+                            // close button
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .overlay(
+                                VStack {
+                                    Text(track.title)
+                                        .padding(.horizontal)
+                                    
+                                    Text("**\(track.artist)**")
+                                        .padding(.horizontal)
+                                }
+                                ,alignment: .bottom
+                                
+                            )
                         }
-                        // close button
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .overlay(
-                            
-                            Button(action: {
-                                // resetting view
-                                shazamSession.matchedTrack = nil
-                                shazamSession.stopRecording()
-                            }, label: {
-                                Image(systemName: "xmark")
-                                    .font(.caption)
-                                    .padding(10)
-                                    .background(Color.white, in: Circle())
-                                    .foregroundStyle(.black)
-                            })
-                                .padding(10)
-                                ,alignment: .topTrailing
-                        )
-                    }
+                }
+                .onLongPressGesture {
+                    shazamSession.matchedTrack = nil
+                    shazamSession.stopRecording()
+                }
             }
         }
         .alert(shazamSession.errorMsg, isPresented: $shazamSession.showError) {

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "QRCode",
+        "repositoryURL": "https://github.com/dmrschmidt/QRCode",
+        "state": {
+          "branch": "main",
+          "revision": "a23c2d2b77483c5ce20ffaf4e68fef2d1a0bbca9",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

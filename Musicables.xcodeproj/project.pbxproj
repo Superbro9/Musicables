@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89421E3226E2AED70085E450 /* ShazamRecogniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580FD326DFDEF700885447 /* ShazamRecogniser.swift */; };
+		89421E3326E2AEDB0085E450 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580FCF26DFDEE600885447 /* Track.swift */; };
 		89580F9326DFDE3B00885447 /* MusicablesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580F9226DFDE3B00885447 /* MusicablesApp.swift */; };
 		89580F9526DFDE3B00885447 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580F9426DFDE3B00885447 /* ContentView.swift */; };
 		89580F9726DFDE3B00885447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89580F9626DFDE3B00885447 /* Assets.xcassets */; };
@@ -19,6 +21,13 @@
 		89580FB226DFDE3C00885447 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580FB126DFDE3C00885447 /* ComplicationController.swift */; };
 		89580FB426DFDE3D00885447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89580FB326DFDE3D00885447 /* Assets.xcassets */; };
 		89580FB726DFDE3D00885447 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89580FB626DFDE3D00885447 /* Preview Assets.xcassets */; };
+		89580FCE26DFDECA00885447 /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 89580FCD26DFDECA00885447 /* QRCode */; };
+		89580FD026DFDEE600885447 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580FCF26DFDEE600885447 /* Track.swift */; };
+		89580FD226DFDEF100885447 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580FD126DFDEF100885447 /* Home.swift */; };
+		89580FD426DFDEF700885447 /* ShazamRecogniser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580FD326DFDEF700885447 /* ShazamRecogniser.swift */; };
+		89580FD826DFDF3600885447 /* WatchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89580FD726DFDF3600885447 /* WatchHome.swift */; };
+		899C25D226FA64AD00252254 /* TestViewWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C25D126FA64AD00252254 /* TestViewWatch.swift */; };
+		89CD171726F7CF8A004C8854 /* TestViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CD171626F7CF8A004C8854 /* TestViewIOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +87,13 @@
 		89580FB326DFDE3D00885447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89580FB626DFDE3D00885447 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89580FB826DFDE3D00885447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89580FCF26DFDEE600885447 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		89580FD126DFDEF100885447 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		89580FD326DFDEF700885447 /* ShazamRecogniser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShazamRecogniser.swift; sourceTree = "<group>"; };
+		89580FD726DFDF3600885447 /* WatchHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchHome.swift; sourceTree = "<group>"; };
+		89580FDB26E009A700885447 /* Musicables-WatchKit-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Musicables-WatchKit-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		899C25D126FA64AD00252254 /* TestViewWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewWatch.swift; sourceTree = "<group>"; };
+		89CD171626F7CF8A004C8854 /* TestViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewIOS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89580FCE26DFDECA00885447 /* QRCode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +115,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89421E3426E2B0D60085E450 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				89580FC826DFDE7D00885447 /* View Model */,
+				89580FC626DFDE6C00885447 /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		89580F8626DFDE3B00885447 = {
 			isa = PBXGroup;
 			children = (
+				89421E3426E2B0D60085E450 /* Shared */,
 				89580F9126DFDE3B00885447 /* Musicables */,
 				89580FA126DFDE3B00885447 /* Musicables WatchKit App */,
 				89580FAC26DFDE3C00885447 /* Musicables WatchKit Extension */,
@@ -121,6 +148,7 @@
 		89580F9126DFDE3B00885447 /* Musicables */ = {
 			isa = PBXGroup;
 			children = (
+				89580FC726DFDE7500885447 /* View */,
 				89580F9226DFDE3B00885447 /* MusicablesApp.swift */,
 				89580F9426DFDE3B00885447 /* ContentView.swift */,
 				89580F9626DFDE3B00885447 /* Assets.xcassets */,
@@ -140,6 +168,7 @@
 		89580FA126DFDE3B00885447 /* Musicables WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				89580FDB26E009A700885447 /* Musicables-WatchKit-App-Info.plist */,
 				89580FA226DFDE3C00885447 /* Assets.xcassets */,
 			);
 			path = "Musicables WatchKit App";
@@ -148,6 +177,7 @@
 		89580FAC26DFDE3C00885447 /* Musicables WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				89580FCA26DFDEAE00885447 /* View */,
 				89580FAD26DFDE3C00885447 /* ContentView.swift */,
 				89580FAF26DFDE3C00885447 /* MusicablesApp.swift */,
 				89580FB126DFDE3C00885447 /* ComplicationController.swift */,
@@ -164,6 +194,40 @@
 				89580FB626DFDE3D00885447 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89580FC626DFDE6C00885447 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89580FCF26DFDEE600885447 /* Track.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89580FC726DFDE7500885447 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89580FD126DFDEF100885447 /* Home.swift */,
+				89CD171626F7CF8A004C8854 /* TestViewIOS.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89580FC826DFDE7D00885447 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				89580FD326DFDEF700885447 /* ShazamRecogniser.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		89580FCA26DFDEAE00885447 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89580FD726DFDF3600885447 /* WatchHome.swift */,
+				899C25D126FA64AD00252254 /* TestViewWatch.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +248,9 @@
 				89580FA026DFDE3B00885447 /* PBXTargetDependency */,
 			);
 			name = Musicables;
+			packageProductDependencies = (
+				89580FCD26DFDECA00885447 /* QRCode */,
+			);
 			productName = Musicables;
 			productReference = 89580F8F26DFDE3B00885447 /* Musicables.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +319,9 @@
 				Base,
 			);
 			mainGroup = 89580F8626DFDE3B00885447;
+			packageReferences = (
+				89580FCC26DFDECA00885447 /* XCRemoteSwiftPackageReference "QRCode" */,
+			);
 			productRefGroup = 89580F9026DFDE3B00885447 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,7 +368,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				89580F9526DFDE3B00885447 /* ContentView.swift in Sources */,
+				89CD171726F7CF8A004C8854 /* TestViewIOS.swift in Sources */,
 				89580F9326DFDE3B00885447 /* MusicablesApp.swift in Sources */,
+				89580FD226DFDEF100885447 /* Home.swift in Sources */,
+				89580FD026DFDEE600885447 /* Track.swift in Sources */,
+				89580FD426DFDEF700885447 /* ShazamRecogniser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,9 +380,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899C25D226FA64AD00252254 /* TestViewWatch.swift in Sources */,
 				89580FAE26DFDE3C00885447 /* ContentView.swift in Sources */,
 				89580FB026DFDE3C00885447 /* MusicablesApp.swift in Sources */,
+				89580FD826DFDF3600885447 /* WatchHome.swift in Sources */,
 				89580FB226DFDE3C00885447 /* ComplicationController.swift in Sources */,
+				89421E3226E2AED70085E450 /* ShazamRecogniser.swift in Sources */,
+				89421E3326E2AEDB0085E450 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,15 +529,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Musicables WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Musicables WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Musicables_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow so we can listen to music";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.superbro.Musicables.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -483,15 +562,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Musicables WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Musicables WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Musicables_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow so we can listen to music";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.superbro.Musicables.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -515,10 +595,11 @@
 				DEVELOPMENT_TEAM = N36Z4HYRU9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Musicables_WatchKit_Extension;
+				INFOPLIST_FILE = "Musicables-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Musicables WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.superbro.Musicables;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.superbro.Musicables.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -541,10 +622,11 @@
 				DEVELOPMENT_TEAM = N36Z4HYRU9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Musicables_WatchKit_Extension;
+				INFOPLIST_FILE = "Musicables-WatchKit-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Musicables WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.superbro.Musicables;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.superbro.Musicables.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -568,6 +650,7 @@
 				DEVELOPMENT_TEAM = N36Z4HYRU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow so we can listen to songs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,7 +661,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.superbro.Musicables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -599,6 +682,7 @@
 				DEVELOPMENT_TEAM = N36Z4HYRU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow so we can listen to songs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -609,7 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.superbro.Musicables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -660,6 +744,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89580FCC26DFDECA00885447 /* XCRemoteSwiftPackageReference "QRCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmrschmidt/QRCode";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89580FCD26DFDECA00885447 /* QRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89580FCC26DFDECA00885447 /* XCRemoteSwiftPackageReference "QRCode" */;
+			productName = QRCode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89580F8726DFDE3B00885447 /* Project object */;
 }

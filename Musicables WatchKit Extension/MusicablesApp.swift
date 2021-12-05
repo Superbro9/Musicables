@@ -11,9 +11,7 @@ import SwiftUI
 struct MusicablesApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
                 ContentView()
-            }
         }
     }
 }
